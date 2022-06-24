@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "cb45b272-2a96-4aad-8c44-4c53d7243c70",
+		"name": "EJERCICIO 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16069744"
+	},
+	"item": [
+		{
+			"name": "List Account Invitations",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "f52f3bec9aa4a9fecbb6e56f48262b4e223e5861eb3cbee002f4cf12f12c4d6b4174365d",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "108169279fc678206160a0cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://a.blazemeter.com/api/v4/user",
+					"protocol": "https",
+					"host": [
+						"a",
+						"blazemeter",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User to Account",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "f52f3bec9aa4a9fecbb6e56f48262b4e223e5861eb3cbee002f4cf12f12c4d6b4174365d",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "108169279fc678206160a0cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"invitations\": [\n        {\n            \"inviteeEmail\": \"myName@myDomain.com\",\n            \"attachAutomatically\": true,\n            \"accountRoles\": [\n                \"standard\"\n            ],\n            \"workspacesId\": [\n                1250586\n            ],\n            \"workspacesRoles\": [\n                \"tester\"\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v4/accounts/1218124/invitations",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v4",
+						"accounts",
+						"1218124",
+						"invitations"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add User to Account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"invitations\": [\n        {\n            \"inviteeEmail\": \"myName@myDomain.com\",\n            \"attachAutomatically\": true,\n            \"accountRoles\": [\n                \"standard\"\n            ],\n            \"workspacesId\": [\n                1250586\n            ],\n            \"workspacesRoles\": [\n                \"tester\"\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://a.blazemeter.com/api/v4/accounts/1218124/invitations",
+							"protocol": "https",
+							"host": [
+								"a",
+								"blazemeter",
+								"com"
+							],
+							"path": [
+								"api",
+								"v4",
+								"accounts",
+								"1218124",
+								"invitations"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Jun 2022 14:41:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1189"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "bzm_sess=3161f8cb2c07ec81e5459ccc1bb99d6a; expires=Sun, 24-Jul-2022 14:41:17 GMT; Max-Age=2592000; path=/; domain=.blazemeter.com; secure; HttpOnly"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15724800; includeSubDomains"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"api_version\": 4,\n    \"error\": null,\n    \"result\": [\n        {\n            \"id\": \"62b5cd0f73f40e2c9e1ff7b3\",\n            \"inviteeEmail\": \"myname@mydomain.com\",\n            \"token\": \"eYfyxUJjXoG8\",\n            \"accountRoles\": [\n                \"standard\"\n            ],\n            \"workspacesRoles\": [\n                \"tester\"\n            ],\n            \"attachAutomatically\": true,\n            \"created\": 1656081679,\n            \"updated\": 1656081679,\n            \"accountId\": 1218124,\n            \"inviteeUserId\": 1358531,\n            \"invitedById\": 1698793,\n            \"workspacesId\": [\n                1250586\n            ],\n            \"accountName\": \"Default Account\",\n            \"acceptUrl\": \"https://a.blazemeter.com/api/v4/accounts/1218124/invitations/62b5cd0f73f40e2c9e1ff7b3/accept/eYfyxUJjXoG8\",\n            \"rejectUrl\": \"https://a.blazemeter.com/api/v4/accounts/1218124/invitations/62b5cd0f73f40e2c9e1ff7b3/reject/eYfyxUJjXoG8\",\n            \"invitingEmail\": \"gustavo.belduma@gmail.com\",\n            \"invitingName\": \"Gustavo Belduma\",\n            \"workspaceNames\": [\n                \"Default workspace\"\n            ]\n        }\n    ],\n    \"request_id\": \"62b5cd0ded25c\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add user exists",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"invitations\": [\n        {\n            \"inviteeEmail\": \"myName@myDomain.com\",\n            \"attachAutomatically\": true,\n            \"accountRoles\": [\n                \"standard\"\n            ],\n            \"workspacesId\": [\n                1250586\n            ],\n            \"workspacesRoles\": [\n                \"tester\"\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v4/accounts/1218124/invitations",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v4",
+						"accounts",
+						"1218124",
+						"invitations"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add user exists",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"invitations\": [\n        {\n            \"inviteeEmail\": \"myName@myDomain.com\",\n            \"attachAutomatically\": true,\n            \"accountRoles\": [\n                \"standard\"\n            ],\n            \"workspacesId\": [\n                1250586\n            ],\n            \"workspacesRoles\": [\n                \"tester\"\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://a.blazemeter.com/api/v4/accounts/1218124/invitations",
+							"protocol": "https",
+							"host": [
+								"a",
+								"blazemeter",
+								"com"
+							],
+							"path": [
+								"api",
+								"v4",
+								"accounts",
+								"1218124",
+								"invitations"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Jun 2022 14:48:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "197"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "bzm_sess=3161f8cb2c07ec81e5459ccc1bb99d6a; expires=Sun, 24-Jul-2022 14:48:43 GMT; Max-Age=2592000; path=/; domain=.blazemeter.com; secure; HttpOnly"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15724800; includeSubDomains"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 400,\n        \"message\": \"Bad Request: User is already a member on this account\"\n    },\n    \"api_version\": 4,\n    \"result\": null,\n    \"request_id\": \"62b5cecb25e63\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login successful",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "f52f3bec9aa4a9fecbb6e56f48262b4e223e5861eb3cbee002f4cf12f12c4d6b4174365d",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "108169279fc678206160a0cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{host}}/api/v4/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v4",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login successful",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://a.blazemeter.com/api/v4/user",
+							"protocol": "https",
+							"host": [
+								"a",
+								"blazemeter",
+								"com"
+							],
+							"path": [
+								"api",
+								"v4",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Jun 2022 15:02:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2113"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "bzm_sess=3161f8cb2c07ec81e5459ccc1bb99d6a; expires=Sun, 24-Jul-2022 15:02:31 GMT; Max-Age=2592000; path=/; domain=.blazemeter.com; secure; HttpOnly"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15724800; includeSubDomains"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"api_version\": 4,\n    \"error\": null,\n    \"result\": {\n        \"id\": 1698793,\n        \"email\": \"gustavo.belduma@gmail.com\",\n        \"passwordUpdateTime\": 1656078061,\n        \"access\": 1656082950,\n        \"login\": 1656078072,\n        \"firstName\": \"Gustavo\",\n        \"lastName\": \"Belduma\",\n        \"timezone\": 0,\n        \"enabled\": true,\n        \"roles\": [\n            \"user\",\n            \"new-billing\",\n            \"authenticated\"\n        ],\n        \"keycloakGoogleRegister\": false,\n        \"apiTestingVersion\": 0,\n        \"created\": 1656078061,\n        \"updated\": 1656078062,\n        \"elev_io_user_hash\": \"6a9995d3fe8db6e140797d6f637024f93f7e88dbe7d50ce22c6b809aceda5e2a\",\n        \"defaultProject\": {\n            \"accountId\": 1218124,\n            \"accountName\": \"Default Account\",\n            \"workspaceName\": \"Default workspace\",\n            \"id\": 1498907,\n            \"name\": \"Default project\",\n            \"userId\": null,\n            \"description\": null,\n            \"underMigration\": null,\n            \"created\": 1656078062,\n            \"updated\": 1656078062,\n            \"organizationId\": null,\n            \"workspaceId\": 1250586\n        },\n        \"defaultProjectId\": 1498907,\n        \"displayName\": \"Gustavo Belduma\",\n        \"features\": [],\n        \"mail\": \"gustavo.belduma@gmail.com\",\n        \"name\": \"Gustavo\",\n        \"preferences\": {\n            \"id\": \"62b5beef4c4f1e790569f455\",\n            \"userId\": 1698793,\n            \"activePlatform\": \"functional\",\n            \"visitedMockServices\": true,\n            \"activeProjectId\": 1498907,\n            \"activeOrganizationId\": 1250586,\n            \"activeWorkspaceId\": 1250586,\n            \"activeAccountId\": 1218124,\n            \"aggregateReportFields\": [\n                \"labelName\",\n                \"samples\",\n                \"avgResponseTime\",\n                \"90line\",\n                \"95line\",\n                \"99line\",\n                \"minResponseTime\",\n                \"maxResponseTime\",\n                \"avgBytes\",\n                \"avgThroughput\",\n                \"errorsRate\"\n            ]\n        }\n    },\n    \"request_id\": \"62b5d2071f481\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login unsuccessful",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "108169279fc678206160a0ccXXX",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "f52f3bec9aa4a9fecbb6e56f48262b4e223e5861eb3cbee002f4cf12f12c4d6b4174365d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v4/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v4",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login unsuccessful",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://a.blazemeter.com/api/v4/user",
+							"protocol": "https",
+							"host": [
+								"a",
+								"blazemeter",
+								"com"
+							],
+							"path": [
+								"api",
+								"v4",
+								"user"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Jun 2022 15:03:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "156"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "bzm_sess=3161f8cb2c07ec81e5459ccc1bb99d6a; expires=Sun, 24-Jul-2022 15:03:19 GMT; Max-Age=2592000; path=/; domain=.blazemeter.com; secure; HttpOnly"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "blazemeter_user=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.blazemeter.com"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "tracking_id=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Basic realm=api"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15724800; includeSubDomains"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    },\n    \"api_version\": 4,\n    \"result\": null,\n    \"request_id\": \"62b5d2379936b\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "f52f3bec9aa4a9fecbb6e56f48262b4e223e5861eb3cbee002f4cf12f12c4d6b4174365d",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "108169279fc678206160a0cc",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

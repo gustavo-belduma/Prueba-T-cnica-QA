@@ -1,0 +1,5 @@
+Conclusiones
+
+- La url de REST de Signup y Login que indicaban en el documento se encontraban en parte desactualizadas, por lo que se recurrió a la guía oficial https://api.blazemeter.com/ para consumir los servicios REST.
+- El uso de entornos permite intercambiar el valor de las variables de forma inmediata.
+- Las validaciones de los códigos de respuesta permiten identificar si fue exitosa o no la petición.
