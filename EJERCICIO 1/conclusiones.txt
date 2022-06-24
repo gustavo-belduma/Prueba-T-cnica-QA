@@ -1,0 +1,10 @@
+
+hallazgos y conclusiones del ejercicio
+
+Hallazgos
+- Para agregar un prodcuto al carrito, el script debe confirmar la decisión del cuadro de alerta que requiere para añadir.
+- No permite establecer la cantidad de productos, por lo que se debe añadir el producto el mismo nro de veces que el cliente requiere.
+
+Conclusiones
+- El formulario para finalizar compra no valida el tipo de datos de ingrso. Ejemplo, que los datos de la tarjeta cumplan con patrón.
+- Una vez finalizada la compra, el sitio web elimina todos los productos del carrito.
